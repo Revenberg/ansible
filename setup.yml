@@ -1,0 +1,9 @@
+---
+- name: Hello Ansible - quick start
+  hosts: rpi
+  become_user: pi
+  become: yes
+
+  tasks:
+    - name: Hello server
+      shell: date >> ~/now.txt

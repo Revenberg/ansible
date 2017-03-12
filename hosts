@@ -1,0 +1,2 @@
+[rpi]
+192.168.2.175  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass=rev61272
