@@ -14,7 +14,7 @@ h=$(hostname)
 echo "$h ansible_host=$i" > hosts
 
 echo "[rpi]" > ~/ansible/hosts
-echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass=rev61272" >> ~/ansible/hosts
+echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass=xxxxxxxx" >> ~/ansible/hosts
 
 cd ~/ansible
 ansible-playbook setup.yml
