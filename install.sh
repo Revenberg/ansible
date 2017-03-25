@@ -1,6 +1,6 @@
-sudo apt-get install git -y
-
 sudo apt-get update
+
+sudo apt-get install git -y
 
 # Install Ansible and Git on the machine.
 sudo apt-get install python-pip git python-dev sshpass -y
