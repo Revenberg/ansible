@@ -1,3 +1,9 @@
+#!/bin/bash
+if [ $# -ne 1 ]; then
+    echo $0: usage: ./install.sh  password
+    return 0
+fi
+
 sudo apt-get update
 
 sudo apt-get install git -y
