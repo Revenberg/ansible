@@ -24,3 +24,6 @@ ansible-playbook setup.yml
 
 cd ~/ansible-media
 ansible-playbook setup.yml
+
+cd ~/ansible-wifi
+ansible-playbook setup.yml
