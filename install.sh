@@ -23,11 +23,10 @@ git clone https://github.com/Revenberg/ansible-wifi.git
 i=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
 h=$(hostname)
 
-echo "$h ansible_host=$i" > hosts
+#echo "$h ansible_host=$i" > hosts
 
 echo "[rpi]" > ~/ansible/hosts
-echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass="$0 >> ~/ansible/hosts
-
+echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass="$1 >> ~/ansible/hosts
 
 cd ~/ansible
 ansible-playbook setup.yml
