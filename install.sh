@@ -16,8 +16,9 @@ sudo pip install markupsafe
 git clone https://github.com/Revenberg/ansible.git
 git clone https://github.com/Revenberg/ansible-install.git
 git clone https://github.com/Revenberg/ansible-screen.git
-git clone https://github.com/Revenberg/ansible-media.git
 git clone https://github.com/Revenberg/ansible-wifi.git
+git clone https://github.com/Revenberg/ansible-media.git
+git clone https://github.com/Revenberg/ansible-kiosk.git
 
 # Configure IP address in "hosts" file. If you have more than one
 # Raspberry Pi, add more lines and enter details
@@ -38,8 +39,11 @@ ansible-playbook setup.yml
 cd ~/ansible-screen
 ansible-playbook setup.yml
 
+cd ~/ansible-wifi
+ansible-playbook setup.yml
+
 cd ~/ansible-media
 ansible-playbook setup.yml
 
-cd ~/ansible-wifi
+cd ~/ansible-kiosk
 ansible-playbook setup.yml
