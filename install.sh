@@ -13,9 +13,9 @@ sudo apt-get install python-pip git python-dev sshpass -y
 sudo pip install ansible
 sudo pip install markupsafe
 
-sudo rm -rf ansible*
 git clone https://github.com/Revenberg/ansible.git
 git clone https://github.com/Revenberg/ansible-install.git
+git clone https://github.com/Revenberg/ansible-screen.git
 git clone https://github.com/Revenberg/ansible-media.git
 git clone https://github.com/Revenberg/ansible-wifi.git
 
@@ -33,6 +33,9 @@ cd ~/ansible
 ansible-playbook setup.yml
 
 cd ~/ansible-install
+ansible-playbook setup.yml
+
+cd ~/ansible-screen
 ansible-playbook setup.yml
 
 cd ~/ansible-media
