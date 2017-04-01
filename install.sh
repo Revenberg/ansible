@@ -47,3 +47,5 @@ ansible-playbook setup.yml
 
 cd ~/ansible-kiosk
 ansible-playbook setup.yml
+
+sudo reboot
