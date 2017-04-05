@@ -35,7 +35,7 @@ echo "[rpi]" > ~/ansible/hosts
 
 cd ~/ansible-install
 ansible-playbook setup.yml >> /home/pi/ansible.log
-
+ 
 cd ~/ansible-screen
 ansible-playbook setup.yml >> /home/pi/ansible.log
 
