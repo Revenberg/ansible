@@ -42,7 +42,7 @@ cd ~/ansible-screen
 ansible-playbook setup.yml >> /home/pi/ansible.log
 
 cd ~/ansible-wifi
-ansible-playbook setup.yml >> /home/pi/ansible.log
+#ansible-playbook setup.yml >> /home/pi/ansible.log
 
 cd ~/ansible-media
 ansible-playbook setup.yml >> /home/pi/ansible.log
