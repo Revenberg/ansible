@@ -4,6 +4,7 @@ if [ $# -ne 1 ]; then
     return 0
 fi
 
+date >> /home/pi/ansible.log
 sudo apt-get update
 sudo apt-get autoremove
 
@@ -27,7 +28,7 @@ git clone https://github.com/Revenberg/ansible-bluetooth.git
 i=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
 h=$(hostname)
 
-echo "$h ansible_host=$i" > /home/pi/ansible.log
+echo "$h ansible_host=$i" >> /home/pi/ansible.log
 
 echo "[rpi]" > ~/ansible/hosts
 echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass="$1 >> ~/ansible/hosts
