@@ -5,6 +5,7 @@ if [ $# -ne 1 ]; then
 fi
 
 sudo apt-get update
+sudo apt-get autoremove
 
 sudo apt-get install git -y
 
