@@ -33,7 +33,7 @@ h=$(hostname)
 echo "$h ansible_host=$i" >> /home/pi/ansible.log
 
 echo "[rpi]" > /home/pi/ansible/hosts
-echo "$h ansible_host=$i" >> /home/pi/ansible/hosts
+echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass="$1 >> ~/ansible/hosts
 
 cd ~/ansible-install
 ansible-playbook setup.yml >> /home/pi/ansible.log
