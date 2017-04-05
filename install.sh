@@ -4,24 +4,25 @@ if [ $# -ne 1 ]; then
     return 0
 fi
 
-date >> /home/pi/ansible.log
-sudo apt-get update
-sudo apt-get autoremove
+sudo rm -rf /home/pi/ansible*
 
-sudo apt-get install git -y
+date >> /home/pi/ansible.log
+sudo apt-get update >> /home/pi/ansible.log
+sudo apt-get autoremove >> /home/pi/ansible.log
+
+sudo apt-get install git -y >> /home/pi/ansible.log
 
 # Install Ansible and Git on the machine.
-sudo apt-get install python-pip git python-dev sshpass -y
-sudo pip install ansible
-sudo pip install markupsafe
+sudo apt-get install python-pip git python-dev sshpass -y >> /home/pi/ansible.log
+sudo pip install ansible >> /home/pi/ansible.log
+sudo pip install markupsafe >> /home/pi/ansible.log
 
-sudo rm -rf /home/pi/ansible*
-git clone https://github.com/Revenberg/ansible-install.git
-git clone https://github.com/Revenberg/ansible-screen.git
-git clone https://github.com/Revenberg/ansible-wifi.git
-git clone https://github.com/Revenberg/ansible-media.git
-git clone https://github.com/Revenberg/ansible-kiosk.git
-git clone https://github.com/Revenberg/ansible-bluetooth.git
+git clone https://github.com/Revenberg/ansible-install.git >> /home/pi/ansible.log
+git clone https://github.com/Revenberg/ansible-screen.git >> /home/pi/ansible.log
+git clone https://github.com/Revenberg/ansible-wifi.git >> /home/pi/ansible.log
+git clone https://github.com/Revenberg/ansible-media.git >> /home/pi/ansible.log
+git clone https://github.com/Revenberg/ansible-kiosk.git >> /home/pi/ansible.log
+git clone https://github.com/Revenberg/ansible-bluetooth.git >> /home/pi/ansible.log
 
 # Configure IP address in "hosts" file. If you have more than one
 # Raspberry Pi, add more lines and enter details
@@ -31,7 +32,6 @@ h=$(hostname)
 echo "$h ansible_host=$i" >> /home/pi/ansible.log
 
 echo "[rpi]" > ~/ansible/hosts
-echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass="$1 >> ~/ansible/hosts
 
 cd ~/ansible-install
 ansible-playbook setup.yml >> /home/pi/ansible.log
