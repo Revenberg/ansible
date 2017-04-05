@@ -32,7 +32,8 @@ h=$(hostname)
 
 echo "$h ansible_host=$i" >> /home/pi/ansible.log
 
-echo "[rpi]" > ~/ansible/hosts
+echo "[rpi]" > /home/pi/ansible/hosts
+echo "$h ansible_host=$i" >> /home/pi/ansible/hosts
 
 cd ~/ansible-install
 ansible-playbook setup.yml >> /home/pi/ansible.log
