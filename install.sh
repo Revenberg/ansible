@@ -17,6 +17,7 @@ sudo apt-get install python-pip git python-dev sshpass -y
 sudo pip install ansible 
 sudo pip install markupsafe 
 
+git clone https://github.com/Revenberg/ansible.git 
 git clone https://github.com/Revenberg/ansible-install.git 
 git clone https://github.com/Revenberg/ansible-screen.git 
 git clone https://github.com/Revenberg/ansible-wifi.git 
