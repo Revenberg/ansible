@@ -37,11 +37,11 @@ echo "$i  ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass="$1 >> ~/a
 
 cd ~/ansible-install
 ansible-playbook setup.yml >> /home/pi/ansible.log
- 
-cd ~/ansible-screen
-ansible-playbook setup.yml >> /home/pi/ansible.log
 
 cd ~/ansible-wifi
+ansible-playbook setup.yml >> /home/pi/ansible.log
+
+cd ~/ansible-screen
 ansible-playbook setup.yml >> /home/pi/ansible.log
 
 cd ~/ansible-media
