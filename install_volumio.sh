@@ -22,7 +22,7 @@ sudo pip install markupsafe
 
 git clone https://github.com/Revenberg/ansible.git
 git clone https://github.com/Revenberg/ansible-install.git
-git clone https://github.com/Revenberg/ansible-media.git
+git clone https://github.com/Revenberg/ansible-volumio-media.git
 
 # Configure IP address in "hosts" file. If you have more than one
 # Raspberry Pi, add more lines and enter details
@@ -39,5 +39,5 @@ echo "volumio ansible_connection=ssh ansible_ssh_user=volumio ansible_ssh_pass=v
 cd /home/volumio/ansible-install
 ansible-playbook setup.yml  >> /home/volumio/ansible.log
 
-cd /home/volumio/ansible-media
+cd /home/volumio/ansible-volumio-media
 ansible-playbook setup.yml >> /home/volumio/ansible.log
