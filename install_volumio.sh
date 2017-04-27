@@ -1,10 +1,12 @@
 #!/bin/bash
 
 sudo rm -rf /home/volumio/ansible*
-
 date >> /home/volumio/ansible.log
 
 sudo chmod u+s `which ping`
+wget https://github.com/Revenberg/ansible-volumio/blob/master/sudoers
+
+sudo mv ./sudoers /etc/sudoers
 
 sudo /bin/rm -v /etc/ssh/ssh_host_* -f
 sudo dpkg-reconfigure openssh-server
