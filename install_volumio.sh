@@ -4,7 +4,9 @@ sudo rm -rf /home/volumio/ansible*
 date >> /home/volumio/ansible.log
 
 sudo chmod u+s `which ping`
+
 wget https://github.com/Revenberg/ansible-volumio/blob/master/sudoers
+sudo chown root:root ./sudoers
 
 sudo mv ./sudoers /etc/sudoers
 
