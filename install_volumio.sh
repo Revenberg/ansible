@@ -8,10 +8,13 @@ fi
 sudo rm -rf /home/volumio/ansible*
 date >> /home/volumio/ansible.log
 
-sudo adduser pi volumio
-sudo sh -c 'echo "pi:"$1  | chpasswd pi'
+i=$(sudo grep "pi ALL=NOPASSWD: ALL" /etc/sudoers | wc -l)
+if (( "$i" == "0" )); then
+        sudo adduser pi volumio
+        sudo sh -c "echo 'pi:'$1  | chpasswd pi"
 
-sudo sh -c "echo 'pi ALL=NOPASSWD: ALL' >> /etc/sudoers"
+        sudo sh -c "echo 'pi ALL=NOPASSWD: ALL' >> /etc/sudoers"
+fi
 
 sudo /bin/rm -v /etc/ssh/ssh_host_* -f
 sudo dpkg-reconfigure openssh-server
