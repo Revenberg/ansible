@@ -13,19 +13,17 @@ h=$(hostname)
 sudo dpkg-reconfigure openssh-server
 sudo /etc/init.d/ssh restart
 
-sudo delgroup pi
+sudo delgroup -remove-home pi
 sudo deluser pi
 
-sudo rm -rf /home/pi
 sudo chmod 4511 /usr/bin/passwd
 sudo chmod u+s /bin/*
 
 u=$(id pi | grep uid | wc -l)
 if (( "$u" == "0" )); then
         sudo addgroup --gid 1001 pi
-        sudo useradd -d /home/pi -g 1001 -p '' -u 1001 pi
-        sudo sh -c "echo 'pi:raspberry:raspberry'  | sudo chpasswd  "
-
+        sudo useradd -m -d /home/pi -s /bin/bash -g 1001 -p '' -u 1001 pi
+        sudo sh -c "echo 'pi:raspberry'  | sudo chpasswd  "
         sudo sh -c "echo 'pi ALL=NOPASSWD: ALL' >> /etc/sudoers"
 fi
 
