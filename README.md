@@ -7,5 +7,5 @@ wget https://raw.githubusercontent.com/Revenberg/ansible/master/install_camera.s
 # Volumio
 wget https://raw.githubusercontent.com/Revenberg/ansible/master/install_volumio.sh && chmod +x install_volumio.sh
 
-Logon with pi
+# Logon with pi
 wget https://raw.githubusercontent.com/Revenberg/ansible/master/install_volumio_pi.sh && chmod +x install_volumio_pi.sh
