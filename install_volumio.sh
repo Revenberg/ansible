@@ -17,7 +17,8 @@ sudo delgroup -remove-home pi
 sudo deluser pi
 
 sudo chmod 4511 /usr/bin/passwd
-sudo chmod u+s /bin/*
+#sudo chmod u+s /bin/*
+sudo chmod u+s `which ping`
 
 u=$(id pi | grep uid | wc -l)
 if (( "$u" == "0" )); then
