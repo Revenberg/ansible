@@ -9,3 +9,6 @@ wget https://raw.githubusercontent.com/Revenberg/ansible/master/install_volumio.
 
 # Logon with pi
 wget https://raw.githubusercontent.com/Revenberg/ansible/master/install_volumio_pi.sh && chmod +x install_volumio_pi.sh
+
+# Foreman
+wget https://raw.githubusercontent.com/Revenberg/ansible/master/foreman.sh && chmod +x foreman.sh
