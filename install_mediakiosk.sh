@@ -23,7 +23,6 @@ git clone https://github.com/Revenberg/ansible-screen.git
 git clone https://github.com/Revenberg/ansible-wifi.git 
 git clone https://github.com/Revenberg/ansible-media.git 
 git clone https://github.com/Revenberg/ansible-kiosk.git 
-git clone https://github.com/Revenberg/ansible-bluetooth.git 
 
 # Configure IP address in "hosts" file. If you have more than one
 # Raspberry Pi, add more lines and enter details
@@ -48,9 +47,6 @@ cd ~/ansible-media
 ansible-playbook setup.yml >> /home/pi/ansible.log
 
 cd ~/ansible-kiosk
-ansible-playbook setup.yml >> /home/pi/ansible.log
-
-cd ~/ansible-bluetooth
 ansible-playbook setup.yml >> /home/pi/ansible.log
 
 sudo reboot
