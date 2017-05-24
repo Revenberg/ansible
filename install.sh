@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ $# -ne 1 ]; then
     echo $0: usage: ./install.sh  password
-    return 0
+    exit 0
 fi
 
 sudo rm -rf /home/pi/ansible*
