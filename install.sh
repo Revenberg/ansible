@@ -19,10 +19,6 @@ sudo pip install markupsafe
 
 git clone https://github.com/Revenberg/ansible.git 
 git clone https://github.com/Revenberg/ansible-install.git 
-git clone https://github.com/Revenberg/ansible-screen.git 
-git clone https://github.com/Revenberg/ansible-wifi.git 
-git clone https://github.com/Revenberg/ansible-media.git 
-git clone https://github.com/Revenberg/ansible-kiosk.git 
 
 # Configure IP address in "hosts" file. If you have more than one
 # Raspberry Pi, add more lines and enter details
