@@ -1,3 +1,6 @@
+# ansible isntall
+wget https://raw.githubusercontent.com/Revenberg/ansible/master/install.sh && chmod +x install.sh
+ 
 # ansible media kiosk
 wget https://raw.githubusercontent.com/Revenberg/ansible/master/install_mediakiosk.sh && chmod +x install_mediakiosk.sh
 
