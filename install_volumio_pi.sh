@@ -7,8 +7,7 @@ h=$(hostname)
 
 sudo apt-get update
 sudo apt-get autoremove
-
-sudo apt-get install git -y
+sudo apt-get -f install git aptitude apt-utils -y
 
 # Install Ansible and Git on the machine.
 sudo apt-get install python-pip git python-dev sshpass -y
