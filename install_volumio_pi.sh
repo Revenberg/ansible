@@ -10,6 +10,10 @@ sudo apt-get autoremove
 sudo apt-get -f install 
 sudo apt-get install git aptitude apt-utils -y
 
+#remove
+#/etc/apt/sources.list
+#deb http://repozytorium.mati75.eu/debian experimental main contrib non-free
+
 # Install Ansible and Git on the machine.
 sudo apt-get install python-pip git python-dev sshpass -y
 sudo pip install ansible
