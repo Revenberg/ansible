@@ -10,10 +10,6 @@ sudo apt-get autoremove
 sudo apt-get -f install 
 sudo apt-get install git aptitude apt-utils -y
 
-#remove
-#/etc/apt/sources.list
-#deb http://repozytorium.mati75.eu/debian experimental main contrib non-free
-
 # Install Ansible and Git on the machine.
 sudo apt-get install python-pip git python-dev sshpass -y
 sudo pip install ansible
@@ -27,8 +23,8 @@ echo "$h ansible_host=$i" >> /home/pi/ansible.log
 echo "[rpi]" > /home/pi/ansible/hosts
 echo "$i ansible_connection=ssh ansible_ssh_user=pi ansible_ssh_pass=raspberry" >> /home/pi/ansible/hosts
 
-cd /home/pi/ansible-install
-ansible-playbook setup.yml  >> /home/pi/ansible.log
+#cd /home/pi/ansible-install
+#ansible-playbook setup.yml  >> /home/pi/ansible.log
 
 cd /home/pi/ansible-volumio-media
 ansible-playbook setup.yml >> /home/pi/ansible.log
