@@ -26,7 +26,7 @@ git clone https://github.com/Revenberg/ansible-kiosk.git
 
 # Configure IP address in "hosts" file. If you have more than one
 # Raspberry Pi, add more lines and enter details
-i=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+i=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -n1)
 h=$(hostname)
 
 echo "$h ansible_host=$i" >> /home/pi/ansible.log
@@ -40,8 +40,8 @@ ansible-playbook setup.yml >> /home/pi/ansible.log
 cd ~/ansible-wifi
 ansible-playbook setup.yml >> /home/pi/ansible.log
 
-cd ~/ansible-screen
-ansible-playbook setup.yml >> /home/pi/ansible.log
+#cd ~/ansible-screen
+#ansible-playbook setup.yml >> /home/pi/ansible.log
 
 cd ~/ansible-media
 ansible-playbook setup.yml >> /home/pi/ansible.log
